@@ -1,7 +1,7 @@
 import MyButton from '@/component/MyButton'
 import { useRouter } from 'expo-router'
 import React, { useEffect, useState } from 'react'
-import { Image, Text, TextInput, View } from 'react-native'
+import { Image, ScrollView, Text, TextInput, View } from 'react-native'
 
 const Login = () => {
  const [value,setValue]=useState({
@@ -14,12 +14,13 @@ const Login = () => {
  
  },[])
 console.log(value);
-    // const router=useRouter();
+    const router=useRouter();
     const onSingup=()=>{
-        // router.navigate("/singup")
+        router.navigate("/Quick")
     }
   return (
-    <View
+    <ScrollView
+    showsVerticalScrollIndicator={false}
       style={{
         flex: 1,
         
@@ -44,6 +45,42 @@ console.log(value);
           borderRadius:10
         }}
         onChangeText={(e)=>setValue((pre)=>({...pre,value1:e}))}/>
+           <TextInput
+        placeholder='Enter Your Email'
+        style={{
+          borderWidth:1,
+          height:50,
+          paddingHorizontal:20,
+          borderRadius:10
+        }}
+        onChangeText={(e)=>setValue((pre)=>({...pre,value1:e}))}/>
+           <TextInput
+        placeholder='Enter Your Email'
+        style={{
+          borderWidth:1,
+          height:50,
+          paddingHorizontal:20,
+          borderRadius:10
+        }}
+        onChangeText={(e)=>setValue((pre)=>({...pre,value1:e}))}/>
+           <TextInput
+        placeholder='Enter Your Email'
+        style={{
+          borderWidth:1,
+          height:50,
+          paddingHorizontal:20,
+          borderRadius:10
+        }}
+        onChangeText={(e)=>setValue((pre)=>({...pre,value1:e}))}/>
+           <TextInput
+        placeholder='Enter Your Email'
+        style={{
+          borderWidth:1,
+          height:50,
+          paddingHorizontal:20,
+          borderRadius:10
+        }}
+        onChangeText={(e)=>setValue((pre)=>({...pre,value1:e}))}/>
         <TextInput
         placeholder='Enter Your Email'
         style={{
@@ -57,7 +94,7 @@ console.log(value);
         </View>
        
      
-    </View>
+    </ScrollView>
   )
 }
 

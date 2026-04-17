@@ -5,6 +5,7 @@ export default function RootLayout() {
           <Stack.Screen name="index" options={{}} />
           <Stack.Screen name="login" options={{}} />
           <Stack.Screen name="singup" options={{}} />
+          <Stack.Screen name="Quick" options={{}} />
           <StatusBar backgroundColor={"white"} style="dark"/>
 
   </Stack>;
