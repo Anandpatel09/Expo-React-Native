@@ -1,12 +1,22 @@
 import MyButton from '@/component/MyButton'
 import { useRouter } from 'expo-router'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Image, Text, TextInput, View } from 'react-native'
 
 const Login = () => {
-    const router=useRouter();
+ const [value,setValue]=useState({
+  value1:"",
+  value2:""
+ });
+ 
+  useEffect(()=>{
+  console.log("Anand ");
+ 
+ },[])
+console.log(value);
+    // const router=useRouter();
     const onSingup=()=>{
-        router.navigate("/singup")
+        // router.navigate("/singup")
     }
   return (
     <View
@@ -33,7 +43,7 @@ const Login = () => {
           paddingHorizontal:20,
           borderRadius:10
         }}
-        onChangeText={(e)=>console.log(e)}/>
+        onChangeText={(e)=>setValue((pre)=>({...pre,value1:e}))}/>
         <TextInput
         placeholder='Enter Your Email'
         style={{
@@ -41,7 +51,8 @@ const Login = () => {
           height:50,
           paddingHorizontal:20,
           borderRadius:10
-        }}/>
+        }}
+        onChangeText={(e)=>setValue((pre)=>({...pre,value2:e}))}/>
          <MyButton title="Login" onPress={onSingup} />
         </View>
        
