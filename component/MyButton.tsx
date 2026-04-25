@@ -21,7 +21,7 @@ export default MyButton
 
 const style = StyleSheet.create({
     button: {
-        backgroundColor: "orange",
+        backgroundColor: "blue",
         paddingHorizontal: 40,
         paddingVertical: 15,
         borderRadius: 10,
