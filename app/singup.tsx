@@ -17,7 +17,7 @@ const Singup = () => {
     >
         <Image source={require("../assets/images/login.jpg")}
         style={{
-          width:"100%",
+          width:"90%",
           height:400,
 
         }}
